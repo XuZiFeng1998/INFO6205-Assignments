@@ -78,14 +78,20 @@ public class RandomWalk {
     }
 
     public static void main(String[] args) {
-//    	for(int i=0;i<1000;i++) {
-//    		RandomWalk rw = new RandomWalk();
-//    		rw.randomWalk(i);
-//    		//System.out.println(i);
-//    		System.out.println(rw.distance());
-//    	}
-    	
-    	System.out.println("We walked 1000000 steps in 60 experiments and the mean distance is  "+randomWalkMulti(1000000,60));
+    	//Generate Graph to show the relationship between steps and distance
+    	for(int i=0;i<1000;i++) {
+    		RandomWalk rw = new RandomWalk();
+    		rw.randomWalk(i);
+    		//System.out.println(i);
+    		System.out.println(rw.distance());
+    	}
+    	//Generate the main distance when input steps and experiment times
+    	System.out.println("We walked 25 steps in 60 experiments and the mean distance is  "+randomWalkMulti(25,100));
+    	System.out.println("We walked 100 steps in 60 experiments and the mean distance is  "+randomWalkMulti(100,100));
+    	System.out.println("We walked 1600 steps in 60 experiments and the mean distance is  "+randomWalkMulti(1600,100));
+    	System.out.println("We walked 160000 steps in 60 experiments and the mean distance is  "+randomWalkMulti(160000,100));
+    	System.out.println("We walked 250000 steps in 60 experiments and the mean distance is  "+randomWalkMulti(250000,100));
+    	System.out.println("We walked 1000000 steps in 60 experiments and the mean distance is  "+randomWalkMulti(1000000,100));
 
     	
     }
